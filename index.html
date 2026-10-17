@@ -112,7 +112,7 @@
             text-shadow: 0 1px 8px rgba(214, 51, 108, 0.35);
         }
 
-        /* Video wrapper */
+        /* Video wrapper untuk YouTube (Responsive 16:9) */
         .video-wrapper {
             width: 100%;
             max-width: 640px;
@@ -125,15 +125,16 @@
             background: #000;
             animation: fadeUp 1.2s ease 0.2s both;
             position: relative;
+            aspect-ratio: 16 / 9;
         }
 
-        .video-wrapper video {
-            display: block;
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            max-height: 70vh;
-            object-fit: contain;
-            background: #1a1a1a;
+            height: 100%;
+            border: none;
         }
 
         /* Pesan romantis */
@@ -207,12 +208,9 @@
             <p>dengan segenap cinta</p>
         </div>
 
-        <!-- Video -->
+        <!-- Video YouTube -->
         <div class="video-wrapper">
-            <video controls playsinline preload="metadata">
-                <source src="https://drive.google.com/uc?export=download&id=1U5-Cwku0PZdaYZTqlKkkCTBCNaTmTuNA" type="video/mp4">
-                Browser kamu tidak mendukung video.
-            </video>
+            <iframe src="https://www.youtube.com/embed/ujSalCby5Mw" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <!-- Pesan romantis -->
